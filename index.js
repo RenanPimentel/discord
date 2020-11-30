@@ -27,7 +27,7 @@ client.on('message', msg => {
     ];
     
     const commands = {
-        [help[0]]: `${process.env.token}${help.join('\n')}`,
+        [help[0]]: `${process.env.prefix}${help.join('\n')}`,
         [help[1]]: bomdia,
         [help[2]]: calc(args, banda),
         [help[3]]: permutation(args)
