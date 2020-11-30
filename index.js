@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const banda = 'https://cdn.discordapp.com/attachments/730098535558545461/782742658404712463/banda.png';
 const bomdia = 'https://cdn.discordapp.com/attachments/730098535558545461/782736100171055124/Humanas.jpg';
 
 const calc = require('./js/calc');
@@ -16,7 +15,7 @@ client.on('message', msg => {
     if (msg.author.bot || !msg.content.startsWith(process.env.prefix)) return;
 
     const commandBody = msg.content.slice(process.env.prefix.length).trim();
-    const args = commandBody.split(' ');
+    const args = commandBody.trim().split(' ');
     const command = args[0].toLowerCase();
 
     const help = [
@@ -27,9 +26,9 @@ client.on('message', msg => {
     ];
     
     const commands = {
-        [help[0]]: `${process.env.token}${help.join('\n')}`,
+        [help[0]]: `${process.env.prefix}${help.join(`\n${process.env.prefix}`)}`,
         [help[1]]: bomdia,
-        [help[2]]: calc(args, banda),
+        [help[2]]: calc(args),
         [help[3]]: permutation(args)
     };
 
