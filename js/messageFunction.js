@@ -35,7 +35,7 @@ function msgFunction(msg) {
         const commandValue = commands[command].value;
 
         if (!commands[command].img) {
-            const embed = (commandValue.startsWith('https://')) ?
+            const embed = (typeof commandValue === 'string' && commandValue.startsWith('https://')) ?
                 makeEmbed(title, '', randColor(), paiOn, errorImg) :
                 makeEmbed(title, commandValue, randColor(), paiOn, randImgs);
 
