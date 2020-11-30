@@ -1,4 +1,4 @@
-const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
+const rand = require('./randomNumber');
 
 function permutations(string) {
     const words = [];

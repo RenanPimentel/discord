@@ -1,21 +1,20 @@
-const banda = 'https://cdn.discordapp.com/attachments/730098535558545461/782742658404712463/banda.png';
+const errorImg = 'https://cdn.discordapp.com/attachments/730098535558545461/782742658404712463/banda.png';
 
-function calc(args) {
-    args.shift();
-    const calculate = args.join(' ');
+function calc(commandArgs) {
+    const argsString = commandArgs.join(' ').trim();
 
-    if(!args.length) return 'escreva alguma equação';
-    if (calculate.match(/^[A-Za-z]+$/g)) return banda;
+    if(!argsString) return 'escreva alguma equação.';
+    if (argsString.match(/^[A-Za-z]+$/g)) return errorImg;
 
-    let evaluated = 0;
+    let calculus = 0;
 
     try {
-        evaluated = eval(calculate);
+        calculus = eval(argsString);
     } catch (e) {
-        return banda;
+        return errorImg;
     }
 
-    return evaluated;
+    return calculus;
 };
 
 module.exports = calc;
