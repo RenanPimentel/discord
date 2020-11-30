@@ -19,10 +19,18 @@ client.on('message', msg => {
     const args = commandBody.split(' ');
     const command = args[0].toLowerCase();
 
+    const ajuda = [
+        'ajuda',
+        'bomdia',
+        'calc',
+        'permutar'
+    ];
+    
     const commands = {
-        bomdia,
-        calc: calc(args, banda),
-        permutar: permutation(args)
+        [ajuda[0]]: `${process.env.token}${ajuda.join('\n')}`,
+        [ajuda[1]]: bomdia,
+        [ajuda[2]]: calc(args, banda),
+        [ajuda[3]]: permutation(args)
     };
 
     if (command in commands) {
