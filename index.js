@@ -19,7 +19,7 @@ client.on('message', msg => {
     
     checkForMario(msg);
 
-    if (!msg.content.startsWith()) return;
+    if (!msg.content.startsWith(process.env.prefix)) return;
 
     const commandMsg = msg.content.slice(process.env.prefix.length).trim();
     const args = commandMsg.split(' ');
