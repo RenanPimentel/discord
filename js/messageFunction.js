@@ -6,15 +6,13 @@ const checkForMario = require('./mario');
 
 const paiOn = 'https://cdn.discordapp.com/attachments/218472696030298112/782767656096366622/paitaon.png';
 
-function msgFunction(msg, commands) {
+function msgFunction(msg, commands, args) {
     if (msg.author.bot) return;
     
     checkForMario(msg);
 
     if (!msg.content.startsWith(process.env.prefix)) return;
 
-    const commandMsg = msg.content.slice(process.env.prefix.length).trim();
-    const args = commandMsg.split(/ /g);
     const command = args.shift().toLowerCase().trim();
 
     if (command in commands) {

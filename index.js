@@ -22,6 +22,9 @@ client.on('message', msg => {
     ];
     const helpFormatted = `${process.env.prefix}${help.join(`\n${process.env.prefix}`)}`;
 
+    const commandMsg = msg.content.slice(process.env.prefix.length).trim();
+    const args = commandMsg.split(/ /g);
+
     const commands = {
         [help[0]]: { value: helpFormatted, img: false },
         [help[1]]: { value: bomdia, img: true },
@@ -29,7 +32,7 @@ client.on('message', msg => {
         [help[3]]: { value: permutation(args), img: false }
     };
 
-    message(msg, commands);
+    message(msg, commands, args);
 });
 
 client.login(process.env.token);
