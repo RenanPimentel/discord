@@ -2,13 +2,13 @@ const Discord = require('discord.js');
 
 const rand = require('./randomNumber');
 
-function makeEmbed(title, description, color, thumb, imgs) {
+function makeEmbed(title, description, color, thumb, img) {
     const embed = new Discord.MessageEmbed()
         .setTitle(title)
         .setDescription(description)
         .setColor(color)
         .setThumbnail(thumb)
-        .setImage(imgs[rand(0, imgs.length)])
+        .setImage(img)
         .setTimestamp(new Date());
     
     return embed;
