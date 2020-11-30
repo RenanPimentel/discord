@@ -1,9 +1,11 @@
 function readyFunction(client) {    
     console.log('pai ta on'.toUpperCase());
     const statuses = [
+        `${process.env.prefix}ajuda`,
         'FOGOS',
         'SAS',
-        'CURIOSO'
+        'Carrinhos 2',
+        
     ];
     
     setInterval(() => {
