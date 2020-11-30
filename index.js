@@ -32,7 +32,7 @@ client.on('message', msg => {
         [help[3]]: { value: permutation(args), img: false }
     };
 
-    message(msg, commands, args);
+    message(msg, commands, args, Discord);
 });
 
 client.login(process.env.token);

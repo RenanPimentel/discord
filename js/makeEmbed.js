@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+
 const rand = require('./randomNumber');
 
 function makeEmbed(title, description, color, thumb, imgs) {
