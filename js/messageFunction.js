@@ -2,7 +2,6 @@ const imgs = require('./imgs');
 const randColor = require("./randomColor");
 const rand = require('./randomNumber');
 const makeEmbed = require("./makeEmbed");
-const checkForMario = require('./mario');
 const calc = require('./calc');
 const permutation = require('./permutacao');
 
