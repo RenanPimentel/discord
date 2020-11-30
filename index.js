@@ -20,6 +20,7 @@ client.on('message', msg => {
         'calc',
         'permutar'
     ];
+    const helpFormatted = `${process.env.prefix}${help.join(`\n${process.env.prefix}`)}`;
 
     const commands = {
         [help[0]]: { value: helpFormatted, img: false },
@@ -28,7 +29,7 @@ client.on('message', msg => {
         [help[3]]: { value: permutation(args), img: false }
     };
 
-    message(msg, commands, help);
+    message(msg, commands);
 });
 
 client.login(process.env.token);
