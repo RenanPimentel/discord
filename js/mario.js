@@ -17,7 +17,7 @@ function marioInMsg(msg) {
 
 function displayMario(msg) {
     if (marioInMsg(msg)) {
-        msg.channel.send(marios[rand()]);
+        msg.channel.send(marios[rand(0, marios.length)]);
         return;
     }
 }

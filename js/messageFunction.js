@@ -7,6 +7,7 @@ const permutation = require('./permutacao');
 
 const bomdia = 'https://cdn.discordapp.com/attachments/730098535558545461/782736100171055124/Humanas.jpg';
 const paiOn = 'https://cdn.discordapp.com/attachments/218472696030298112/782767656096366622/paitaon.png';
+const errorImg = 'https://cdn.discordapp.com/attachments/730098535558545461/782742658404712463/banda.png';
 
 function msgFunction(msg) {
     const help = [
@@ -34,7 +35,10 @@ function msgFunction(msg) {
         const commandValue = commands[command].value;
 
         if (!commands[command].img) {
-            const embed = makeEmbed(title, commandValue, randColor(), paiOn, randImgs);
+            const embed = (commandValue.startsWith('https://')) ?
+                makeEmbed(title, '', randColor(), paiOn, errorImg) :
+                makeEmbed(title, commandValue, randColor(), paiOn, randImgs);
+
             msg.channel.send(embed);
      
         } else {
