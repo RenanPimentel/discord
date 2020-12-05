@@ -5,7 +5,7 @@ String.prototype.capitalize = function() {
 module.exports = client => {
     console.log('pai ta on'.toUpperCase());
     const statuses = [
-        `${process.env.PREFIX}ajuda`,
+        `${process.env.prefix}ajuda`,
         'FOGOS',
         'SAS',
         'Carrinhos 2',

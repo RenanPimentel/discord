@@ -15,9 +15,9 @@ module.exports = msg => {
         'calc',
         'permutar'
     ];
-    const helpFormatted = `${process.env.PREFIX}${help.join(`\n${process.env.PREFIX}`)}`;
+    const helpFormatted = `${process.env.prefix}${help.join(`\n${process.env.prefix}`)}`;
 
-    const commandMsg = msg.content.slice(process.env.PREFIX.length).trim();
+    const commandMsg = msg.content.slice(process.env.prefix.length).trim();
     const args = commandMsg.split(/ /g);
     const command = args.shift().toLowerCase().trim();
 
