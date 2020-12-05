@@ -8,7 +8,7 @@ const makeEmbed = require("./makeEmbed");
 const calc = require('./calc');
 const permutation = require('./permutacao');
 
-const aa = msg => {
+module.exports = msg => {
     const help = [
         'ajuda',
         'bomdia',
@@ -46,6 +46,3 @@ const aa = msg => {
         }
     }
 }
-
-
-aa('.ajuda');
