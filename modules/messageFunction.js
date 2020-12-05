@@ -2,13 +2,13 @@ const bomdia = 'https://cdn.discordapp.com/attachments/730098535558545461/782736
 const paiOn = 'https://cdn.discordapp.com/attachments/218472696030298112/782767656096366622/paitaon.png';
 const errorImg = 'https://cdn.discordapp.com/attachments/730098535558545461/782742658404712463/banda.png';
 
-const imgs = require('./imgs');
+const imgs = require('./imgs.json');
 const { rand, randColor } = require('./random');
 const makeEmbed = require("./makeEmbed");
 const calc = require('./calc');
 const permutation = require('./permutacao');
 
-module.exports = msg => {
+const aa = msg => {
     const help = [
         'ajuda',
         'bomdia',
@@ -46,3 +46,6 @@ module.exports = msg => {
         }
     }
 }
+
+
+aa('.ajuda');
