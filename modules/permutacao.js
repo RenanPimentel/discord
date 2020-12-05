@@ -1,4 +1,4 @@
-const rand = require('./random');
+const { rand } = require('./random');
 
 module.exports = string => {
     const words = [];
