@@ -1,13 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const ready = require('./js/readyFunction');
-const message = require('./js/messageFunction');
-const checkForMario = require('./js/mario');
-
-String.prototype.capitalize = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase();
-}
+const ready = require('./modules/readyFunction');
+const message = require('./modules/messageFunction');
+const checkForMario = require('./modules/mario');
 
 client.on('ready', () => ready(client));
 
