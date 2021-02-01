@@ -29,4 +29,4 @@ client.on('message', (msg: Message) => {
   : 'Não pude achar esse comando');
 });
 
-if (envConfig.parsed) client.login(discordToken);
+client.login(discordToken);
