@@ -5,8 +5,8 @@ import readyFunction from './modules/ready';
 const client = new Client({ partials: ['MESSAGE'] });
 
 const envConfig = dotenv.config();
-const prefix = envConfig.parsed ? envConfig.parsed['PREFIX'] : '.';
-const discordToken = envConfig.parsed ? envConfig.parsed['DISCORD_TOKEN'] : '';
+const prefix = envConfig.parsed ? envConfig.parsed['PREFIX'] : process.env.PREFIX;
+const discordToken = envConfig.parsed ? envConfig.parsed['DISCORD_TOKEN'] : process.env.DISCORD_TOKEN;
 
 type Commands = { calendario: () => string };
 

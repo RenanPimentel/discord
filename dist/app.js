@@ -27,8 +27,8 @@ var discord_js_1 = require("discord.js");
 var ready_1 = __importDefault(require("./modules/ready"));
 var client = new discord_js_1.Client({ partials: ['MESSAGE'] });
 var envConfig = dotenv.config();
-var prefix = envConfig.parsed ? envConfig.parsed['PREFIX'] : '.';
-var discordToken = envConfig.parsed ? envConfig.parsed['DISCORD_TOKEN'] : '';
+var prefix = envConfig.parsed ? envConfig.parsed['PREFIX'] : process.env.PREFIX;
+var discordToken = envConfig.parsed ? envConfig.parsed['DISCORD_TOKEN'] : process.env.DISCORD_TOKEN;
 var commands = {
     calendario: function () { return 'https://cdn.discordapp.com/attachments/773501806268645376/803225446459113472/7e79fa62-a404-4018-bb2d-458274e38108.png'; },
 };
