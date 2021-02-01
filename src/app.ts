@@ -1,13 +1,12 @@
 import * as dotenv from 'dotenv';
 import { Client, Message } from 'discord.js';
+import readyFunction from './modules/ready';
 
 const client = new Client({ partials: ['MESSAGE'] });
 
 const envConfig = dotenv.config();
 const prefix = envConfig.parsed ? envConfig.parsed['PREFIX'] : '.';
 const discordToken = envConfig.parsed ? envConfig.parsed['DISCORD_TOKEN'] : '';
-
-import readyFunction from './modules/ready';
 
 type Commands = { calendario: () => string };
 
@@ -31,5 +30,3 @@ client.on('message', (msg: Message) => {
 });
 
 if (envConfig.parsed) client.login(discordToken);
-
-

@@ -116,7 +116,7 @@ exports.default = [
         else if (hours === 15 && minutes >= 30 || hours === 16 && minutes < 15)
             return 'Literatura';
         else if (hours === 16 && minutes >= 15)
-            return 'Química-Marquim';
+            return 'Química-Mário';
         else
             null;
     },
